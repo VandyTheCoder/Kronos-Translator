@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+
+    = favicon_link_tag 'icon.ico'
+
+    %title Chronos Translator
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body{ id: "#{controller_name}_#{params[:action]}" }
+    = render "partials/topnav"
+
+    .container-fluid
+      .row
+        .col-sm-12
+          = yield

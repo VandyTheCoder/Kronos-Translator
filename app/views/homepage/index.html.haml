@@ -1,0 +1,67 @@
+.row.translator-row
+  .col-sm-6
+    .row.language-row
+      .col-6
+        .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
+          %label.btn.btn-outline-secondary.btn-sm.active#en-button
+            %input#en-check{:autocomplete => "off", :checked => "checked", :name => "input-language", :type => "radio", value: "en"}/
+            = image_tag "en.png", size: '15x10'
+            English
+          %label.btn.btn-outline-secondary.btn-sm#kh-button
+            %input#kh-check{:autocomplete => "off", :name => "input-language", :type => "radio", value: "kh"}/
+            = image_tag "kh.png", size: '15x10'
+            Khmer
+      .col-6.text-right
+        %button.btn.btn-outline-secondary.btn-sm{:type => "button", id: 'change-language'}
+          %i.fa.fa-exchange
+
+    %textarea.form-control.language-input{:rows => "6", id: "first-textarea"}
+
+  .col-sm-6
+    .row.language-row
+      .col-sm-12
+        %button.btn.btn-secondary.btn-sm{:type => "button", id: 'output-language'}
+          = image_tag "kh.png", size: '15x10'
+          Khmer
+        %button.btn.btn-outline-secondary.btn-sm{:type => "button", id: "copy-button", "data-toggle" =>"tooltip", "data-placement" => "top", title: "Copy to Clipboard"}
+          %i.fa.fa-clipboard
+          Copy
+        
+    %textarea.form-control.language-input{:rows => "6", id: "second-textarea", disabled: ""}
+
+.row.dependency-row.text-center
+  .col-sm-2
+    = image_tag "ubuntu.png", class: "img-thumbnail", size: '200x200'
+    %p.title-dep
+      %b Ubuntu 16.04
+    Linux OS
+
+  .col-sm-2
+    = image_tag "mose.png", class: "img-thumbnail", size: '200x200'
+    %p.title-dep
+      %b Moses 2.1
+    Statistical Machine Translation System 
+
+  .col-sm-2
+    = image_tag "rails.png", class: "img-thumbnail", size: '200x200'
+    %p.title-dep
+      %b Ruby On Rails 5.1.4
+    Backend Framework
+
+  .col-sm-2
+    = image_tag "redis.png", class: "img-thumbnail", size: '200x200'
+    %p.title-dep
+      %b Redis Server 3.0.6
+    Cached Database
+
+  .col-sm-2
+    = image_tag "sidekiq.png", class: "img-thumbnail", size: '200x200'
+    %p.title-dep
+      %b Sidekiq 5.0.4
+    Banckground Jobs
+
+  .col-sm-2
+    = image_tag "bootstrap.png", class: "img-thumbnail", size: '200x200'
+    %p.title-dep
+      %b Boostrap 4.1.3
+    Frontend Framework
