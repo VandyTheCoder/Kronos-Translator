@@ -1,6 +1,6 @@
-# Rails rTesseract Example
+# Krosnos Translator
 
-This project, I created for practicing to use [Tesseract-OCR](https://github.com/tesseract-ocr/) and [rTesseract-OCR Gem](https://github.com/dannnylo/rtesseract). It is OCR system for English and Khmer and created by using [Ruby On Rails](http://rubyonrails.org/).
+This project, I created for reviewing what I have learnt in **Natural Language Processing** and **Rails Action Cable(Real-Time System)**. It is fun experience because I have learnt a lot of things from this project. It is real-time translating like google translate and I created by using [Ruby On Rails](http://rubyonrails.org/).
 
 ## Getting Started
 
@@ -8,16 +8,14 @@ Before you install this project, there are some required source you need to inst
 
 ### Prerequisites
 
-Install [Tesseract-OCR](https://github.com/tesseract-ocr/)
+Install [Redis-Server](https://redis.io/)
 ```
-sudo apt-get install tesseract-ocr-eng
-sudo apt-get install tesseract-ocr-khm
+sudo apt-get install redis-server
 ```
 
-Install [ImageMagick](https://www.imagemagick.org/script/index.php)
+Running Redis-Server in Local Hosting(Independent Terminal)
 ```
-sudo apt install imagemagick
-convert -h
+redis-server
 ```
 
 ### Installing
@@ -36,24 +34,41 @@ Create database and tables
 rails db:migrate
 ```
 
-Running Application
+Run Redis-Server (Open Another Terminal)
+
+```
+redis-server
+```
+
+Run Rails Application(Independent Terminal)
 
 ```
 rails server
 ```
 
-***Congratulation!*** Now, you already run the project on your machine or server.
+Run Sidekiq Backgound Job(Independent Terminal)
 
+```
+sidekiq
+```
+
+***Congratulation!*** Now, you are ready to run the project on your local server.
+
+## Notice
+Because the data(corpus) were collected by my friends from unversity, I can't push the model along with source code. You have to
+train it your self using [Mose Decoder](http://www.statmt.org/moses/).
+-> Edit Path to Your Trained Model in file ***kronus-translator>app>worker>transalte_worker.rb***
 
 ## Versioning
 
-Chronos Version is ***1.0.0***.
+Kronus Translator Version is ***1.0***
 
 ## Authors
 
 * **Vandy Sodanheang** - *Initial work* - [Web and Mobile Developer](https://www.linkedin.com/in/vandy-sodanheang-368410113/)
+* **NIPTICT CS FAMILY** - *Co-initial work* - Web and Mobile Developer
 
-See also the list of [contributors](https://github.com/Sodanheang/Chronos-Translator/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Sodanheang/Kronos-Translator/contributors) who participated in this project.
 
 ## License
 
