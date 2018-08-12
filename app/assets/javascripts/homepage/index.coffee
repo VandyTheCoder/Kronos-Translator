@@ -11,11 +11,15 @@ Translator.HomepageIndex =
     $('[data-toggle="tooltip"]').tooltip()    
 
   _handleLanguageButton: ->
+    self = @
     output_language = $("#output-language")
     $("#kh-button").click ->
       output_language.html("<img src='/en.png' alt='kh' width='15' height='10'> Khmer")
+      self._exchangeValueOfTextArea()
+      
     $("#en-button").click ->
       output_language.html("<img src='/kh.png' alt='en' width='15' height='10'> English")
+      self._exchangeValueOfTextArea()
 
   _handleChangeLanguageButton: ->
     change_btn = $('#change-language')
@@ -69,3 +73,11 @@ Translator.HomepageIndex =
       language = $("input[name=input-language]:checked").val()
       data = {input: $(this).val(), language: language}
       AppCable.rails_translator.translate(data)
+
+  _exchangeValueOfTextArea: ->
+    firstTextarea = $('#first-textarea')
+    secondTextarea = $('#second-textarea')
+
+    temp_result = firstTextarea.val().replace(/(\r\n\t|\n|\r\t)/gm,"")
+    firstTextarea.val(secondTextarea.val().replace(/(\r\n\t|\n|\r\t)/gm,""))
+    secondTextarea.val(temp_result)

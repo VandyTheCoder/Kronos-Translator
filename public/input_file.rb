@@ -1,1 +1,1 @@
-puts 'it is a game'
+puts 'ខ្ញំុទៅសាលារៀន'

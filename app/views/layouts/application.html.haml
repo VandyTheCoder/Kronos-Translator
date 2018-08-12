@@ -20,3 +20,35 @@
       .row
         .col-sm-12
           = yield
+    
+    .row.dependency-row.text-center
+      .col-sm-6
+      .col-sm-1
+        = image_tag "ubuntu.png", class: "img-thumbnail", size: '200x200'
+        %p.title-dep
+          %b Ubuntu
+
+      .col-sm-1
+        = image_tag "mose.png", class: "img-thumbnail", size: '200x200'
+        %p.title-dep
+          %b Moses
+
+      .col-sm-1
+        = image_tag "rails.png", class: "img-thumbnail", size: '200x200'
+        %p.title-dep
+          %b ROR
+
+      .col-sm-1
+        = image_tag "redis.png", class: "img-thumbnail", size: '200x200'
+        %p.title-dep
+          %b Redis
+
+      .col-sm-1
+        = image_tag "sidekiq.png", class: "img-thumbnail", size: '200x200'
+        %p.title-dep
+          %b Sidekiq
+
+      .col-sm-1
+        = image_tag "bootstrap.png", class: "img-thumbnail", size: '200x200'
+        %p.title-dep
+          %b Boostrap
