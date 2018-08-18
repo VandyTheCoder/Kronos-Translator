@@ -1,4 +1,4 @@
-# Krosnos Translator
+# Kronos Translator
 
 This project, I created for reviewing what I have learnt in **Natural Language Processing** and **Rails Action Cable(Real-Time System)**. It is fun experience because I have learnt a lot of things from this project. It is real-time translating like google translate and I created by using [Ruby On Rails](http://rubyonrails.org/).
 
