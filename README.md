@@ -62,7 +62,7 @@ train it your self using [Mose Decoder](http://www.statmt.org/moses/).
 
 ## Versioning
 
-Kronus Translator Version is ***1.0***
+Kronos Translator Version is ***1.0***
 
 ## Authors
 
