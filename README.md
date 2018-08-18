@@ -57,7 +57,8 @@ sidekiq
 ## Notice
 Because the data(corpus) were collected by my friends from unversity, I can't push the model along with source code. You have to
 train it your self using [Mose Decoder](http://www.statmt.org/moses/).
--> Edit Path to Your Trained Model in file ***kronus-translator>app>worker>transalte_worker.rb***
+
+-> Edit Path to Your Trained Model in file ***kronos-translator>app>worker>transalte_worker.rb***
 
 ## Versioning
 
